@@ -16,6 +16,8 @@ function image()
     setTimeout(image, 2500);
 }
 
+///////////////////// List toggles ///////////////////////////
+
 document.getElementById("button").addEventListener("click", drop);
 
 function drop() 
