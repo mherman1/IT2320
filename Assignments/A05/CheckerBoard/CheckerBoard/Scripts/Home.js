@@ -1,10 +1,9 @@
-﻿$(document).ready(function ()
-{
+﻿$(document).ready(function () {
     var cells = $(".cell");
     var colorCount = 0;
-
-    for (var i = 0; i < cells.length; i++)
-    {
+    var piece = {};
+    
+    for (var i = 0; i < cells.length; i++) {
         var cell = $(cells[i]);
         var isDark = colorCount % 2 == 0;
         var isNextRow = (i + 1) % 8 == 0;
@@ -12,45 +11,22 @@
         cell.css("background-color", isDark ? "navy" : "white");
     }
 
-    $(".red").click(function () {
+    $("div").click(function () {
+        if ($(this).hasClass("red")) {
+            piece = this;
 
-        $(this).css("background-color", "yellow");
+            $(piece).css("border", "1px solid limegreen")
 
-        $(".black,.cell").click(function ()
-        {
-            $(this).removeClass("piece black").addClass("piece red");
-        });
+            $(piece).click(function () {
+                $(piece).css("border", "1px solid black")
+            })
 
-        $(this).click(function ()
-        {
-            for (var i = 0; i < cells.length; i++)
-            {
-                var cell = $(cells[i]);
-                var isDark = colorCount % 2 == 0;
-                var isNextRow = (i + 1) % 8 == 0;
-                colorCount += isNextRow ? 2 : 1;
-                cell.css("background-color", isDark ? "navy" : "white");
-            }
-        });
+            $(".black, .cell").click(function () {
+                $(this).removeClass("piece black").addClass("piece red");
+                $(piece).removeClass("piece red").css("border", "1px solid black");
+            })
+        }
     });
 
-    $(".black").click(function () {
-
-        $(this).css("background-color", "yellow");
-
-        $(".red,.cell").click(function () {
-            $(this).removeClass("piece red").addClass("piece black");
-        });
-
-        $(this).click(function () {
-            for (var i = 0; i < cells.length; i++) {
-                var cell = $(cells[i]);
-                var isDark = colorCount % 2 == 0;
-                var isNextRow = (i + 1) % 8 == 0;
-                colorCount += isNextRow ? 2 : 1;
-                cell.css("background-color", isDark ? "navy" : "white");
-            }
-        });
-    });
 
 });
