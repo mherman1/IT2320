@@ -1,0 +1,67 @@
+﻿body {
+    width: 520px;
+    font-family: Calibri;
+    font-size: 12px;
+}
+
+.index header {
+    font-family: Cambria;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.index p {
+    font-family: Calibri;
+    font-size: 12px;
+    font-style: italic;
+    text-align: left;
+}
+
+.index button
+{
+    margin: 5px;
+    float: right;
+}
+
+.index input
+{
+    width: 125px;
+    display: inline-block;
+}
+
+.index .home 
+{
+    width: 520px;
+    height: 300px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.index .message
+{
+    width: 200px;
+    margin: 20px;
+    display: inline-block;
+}
+
+.index .data
+{
+    width: 250px;
+    display: inline-block;
+}
+
+.index .tag
+{
+    margin-top: 10px;
+    width: 120px;
+    display: inline-block;
+}
+
+.index .break
+{
+    margin: 20px;
+    border-top: 1px solid black;
+}
+
+
