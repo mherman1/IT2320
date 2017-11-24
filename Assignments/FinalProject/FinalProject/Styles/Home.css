@@ -30,13 +30,16 @@
     display: inline-block;
 }
 
+
+
 .index .home 
 {
     width: 520px;
     height: 300px;
     border: 1px solid black;
     margin-bottom: 10px;
-}
+    position: absolute;
+}    
 
 .index .message
 {
@@ -62,6 +65,18 @@
 {
     margin: 20px;
     border-top: 1px solid black;
+}
+
+.index .account 
+{
+    display: inline;
+    width: 520px;
+    height: 300px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    position: absolute;
+    left: 600px;
+    
 }
 
 
