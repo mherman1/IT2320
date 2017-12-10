@@ -1,82 +1,371 @@
-﻿body {
+﻿body 
+{
     width: 520px;
     font-family: Calibri;
     font-size: 12px;
 }
 
-.index header {
+.index
+{
+    height: 430px;
+}
+
+.index header 
+{
     font-family: Cambria;
     font-size: 16px;
     font-weight: bold;
     text-align: left;
 }
 
-.index p {
+.index p 
+{
     font-family: Calibri;
     font-size: 12px;
     font-style: italic;
     text-align: left;
 }
 
-.index button
+.index .container 
 {
-    margin: 5px;
-    float: right;
-}
+    width: 520px;
+    height: 315px;
+    font-family: 'Lucida Grande';
+}  
 
-.index input
-{
-    width: 125px;
-    display: inline-block;
-}
-
-
-
-.index .home 
+.index .container .login 
 {
     width: 520px;
     height: 300px;
-    border: 1px solid black;
     margin-bottom: 10px;
+    border-radius: 4px;
     position: absolute;
-}    
+    overflow: hidden;
+    background: #1e899a; /* Old browsers */
+    background: -moz-linear-gradient(top, #1e899a 0%, #20bfca 0%, #7ee5e8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #1e899a 0%,#20bfca 0%,#7ee5e8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #1e899a 0%,#20bfca 0%,#7ee5e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e899a', endColorstr='#7ee5e8',GradientType=0 ); /* IE6-9 */
+}
 
-.index .message
+.index .container .login img
+{
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+    
+.index .container .login .message1 
 {
     width: 200px;
     margin: 20px;
     display: inline-block;
+    font-size: 13px;
 }
 
-.index .data
+.index .container .login .message2 
+{
+    width: 200px;
+    margin: 20px;
+    display: inline-block;
+    position: relative;
+    bottom: 60px;
+    font-size: 13px;
+}
+
+.index .container .login .data
 {
     width: 250px;
     display: inline-block;
 }
 
-.index .tag
+.index .container .login .data .mobileHeader
+{
+    display: none;
+}
+
+.index .container .login .data input 
+{
+    width: 125px;
+    display: inline-block;
+}
+
+.index .container .login .data .tag
 {
     margin-top: 10px;
     width: 120px;
     display: inline-block;
 }
 
-.index .break
+.index .container .login .data .LoginButton 
+{
+    margin-top: 10px;
+    width: 60px;
+    border: 1px solid gray;
+    display: inline-block;
+    position: relative;
+    left: 185px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    background-color: lightgray;
+} 
+
+.index .container .login .data .LoginButton:hover 
+{
+    background-color: white;
+}
+
+.index .container .login .data .CreateAccountButton 
+{
+    margin-top: 10px;
+    width: 80px;
+    border: 1px solid gray;
+    display: inline-block;
+    position: relative;
+    left: 165px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.index .container .login .data .CreateAccountButton:hover
+{
+    background-color: white;
+}
+
+.index .container .login .break
 {
     margin: 20px;
-    border-top: 1px solid black;
+    border-top: 2px solid lightgray;
 }
 
-.index .account 
+.index .container .accountInfo 
 {
-    display: inline;
     width: 520px;
     height: 300px;
-    border: 1px solid black;
     margin-bottom: 10px;
+    border-radius: 4px;
     position: absolute;
-    left: 600px;
-    
+    overflow: hidden;
+    left: 100%;
+    background: #1e899a; /* Old browsers */
+    background: -moz-linear-gradient(top, #1e899a 0%, #20bfca 0%, #7ee5e8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #1e899a 0%,#20bfca 0%,#7ee5e8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #1e899a 0%,#20bfca 0%,#7ee5e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e899a', endColorstr='#7ee5e8',GradientType=0 ); /* IE6-9 */
 }
 
+.index .container .accountInfo .displayInfo
+{
+    width: 400px;
+}
 
+.index .container .accountInfo .break 
+{
+    margin: 20px;
+    border-top: 2px solid lightgray;
+}
+
+.index .container .accountInfo .addInfo
+{
+    margin: auto;
+    width: 240px;
+}
+
+.index .container .accountInfo .addInfo img 
+{
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+
+.index .container .accountInfo .addInfo .data input 
+{
+    width: 125px;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.index .container .accountInfo .addInfo .data .tag 
+{
+    display: inline-block;
+    width: 80px;
+}
+
+.index .container .accountInfo .addInfo .data .AddElementButton 
+{
+    display: block;
+    border: 1px solid gray;
+    width: 30px;
+    position: relative;
+    left: 185px;
+    margin-top: 5px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.index .container .accountInfo .addInfo .data .AddElementButton:hover 
+{
+    background-color: white;
+}
+
+@media screen and (max-width: 320px) 
+{
+    body 
+    {
+        width: 300px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-family: Calibri;
+        font-size: 12px;
+    }
+
+    .index header 
+    {
+        font-family: Cambria;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .index p 
+    {
+        font-family: Calibri;
+        font-size: 12px;
+        font-style: italic;
+        text-align: center;
+    }
+
+    .index footer
+    {
+        text-align: center;
+    }
+
+    .index .container 
+    {
+        width: 300px;
+    }
+
+    .index .container .login 
+    {
+        width: 300px;
+        height: 310px;
+    }
+
+    .index .container .login img 
+    {
+        display: none;
+    }
+
+    .index .container .login .break 
+    {
+        margin: 15px;
+    }
+
+    .index .container .login .data 
+    {
+        width: 290px;
+    }
+
+    .index .container .login .data input 
+    {
+        margin-left: 10px;
+    }
+
+    .index .container .login .data .tag 
+    {
+        margin-left: 20px;
+    }
+
+    .index .container .login .data .mobileHeader 
+    {
+        display: block;
+        margin-left: 20px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .index .container .login .message1 
+    {
+        display: none;
+    }
+
+    .index .container .login .message2 
+    {
+        display: none;
+    }
+
+    .index .container .login .data .LoginButton 
+    {
+        width: 280px;
+        height: 20px;
+        left: 10px;
+        font-size: 14px;
+    }
+
+    .index .container .login .data .CreateAccountButton 
+    {
+        width: 280px;
+        height: 20px;
+        left: 10px;
+        font-size: 14px;
+    }
+
+    .index .container .accountInfo 
+    {
+        width: 300px;
+        height: 310px;
+    }
+
+    .index .container .accountInfo .displayInfo 
+    {
+        width: 290px;
+    }
+
+    .index .container .accountInfo .addInfo 
+    {
+        width: 290px;
+    }
+
+    .index .container .accountInfo .addInfo img 
+    {
+        display: none;
+    }
+
+    .index .container .accountInfo .addInfo .data input 
+    {
+        display: block;
+        width: 200px;
+        margin-left: 40px;
+    }
+
+    .index .container .accountInfo .addInfo .data .tag 
+    {
+        display: block;
+        width: 80px;
+        margin: 5px;
+        margin-left: 40px;
+    }
+
+    .index .container .accountInfo .addInfo .data .AddElementButton 
+    {
+        width: 200px;
+        height: 20px;
+        left: 40px;
+        font-size: 15px;
+    }
+
+}
+
+        

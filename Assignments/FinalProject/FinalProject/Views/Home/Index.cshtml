@@ -13,45 +13,77 @@
         <script src="~/Scripts/Home.js"></script>
 
     <div class="index">
-    
-        <header>Welcome to Cuyahoga Community College Student Services Online</header>
 
-        <p>Cuyahoga Community College recognizes students' rights to access personal and 
-        academic records in accordance with the Family Educational Rights and Privacy Act 
-        of 1974 (FERPA) as amended by Public Law 93-568.</p>
         
-        <div class="home">
-            
-            <div class="message">Already have an account with us? Returning users may log in by entering their site username and password.</div>
-            
-            <div class="data">
-                <div class="tag">Username </div>
-                <input type="text" name="username" />
-                <div class="tag">Password </div>
-                <input type="password" name="password" />
-                <button class="button">Log In</button>
+        <header>Welcome to Cuyahoga Community College Student Services Online</header>
+        <p>
+           Cuyahoga Community College recognizes students' rights to access personal and
+           academic records in accordance with the Family Educational Rights and Privacy Act
+           of 1974 (FERPA) as amended by Public Law 93-568.
+        </p>
+
+        <div class="container">
+
+            <div class="login">
+
+                <div class="message1">Already have an account with us? Returning users may log in by entering their site username and password.</div>
+
+                <div class="data">
+                    <div class="mobileHeader">Log In</div>
+                    <div class="tag">Username </div>
+                    <input id="LoginUsername"type="text" name="username" />
+                    <div class="tag">Password </div>
+                    <input id="LoginPassword"type="password" name="password" />
+                    <div class="LoginButton">Log In</div>
+                </div>
+
+                <div class="break"></div>
+
+                <div class="message2">New users, please create a new account by providing us with some basic information.</div>
+
+                <img src="~/Images/TriCLogo.png" alt="Tri-C Logo"/>
+
+                <div class="data">
+                    <div class="mobileHeader">Create Account</div>
+                    <div class="tag">Username </div>
+                    <input id="NewUsername" type="text" name="username" value=""/>
+                    <div class="tag">Password </div>
+                    <input id="NewPassword" type="password" name="password" value=""/>
+                    <div class="tag">Email </div>
+                    <input id="NewEmailAdd" type="text" name="email" value=""/>
+                    <div class="tag">Repeat E-mail Address </div>
+                    <input id="NewEmailCon" type="text" name="email repeat" value=""/>
+                    <div class="CreateAccountButton">Create Account</div>
+                </div>
+
             </div>
 
-            <div class="break"></div>
             
-            <div class="message">New users, please create a new account by providing us with some basic information.</div>
-            
-            <div class="data">
-                <div class="tag">Username </div>
-                <input type="text" name="username" />
-                <div class="tag">Password </div>
-                <input type="password" name="password" />
-                <div class="tag">Email </div>
-                <input type="text" name="email" />
-                <div class="tag">Repeat E-mail Address </div>
-                <input type="text" name="email repeat" />
-                <button>Create Account</button>
+
+            <div class="accountInfo">
+
+                <div class="displayInfo"></div>
+
+                <div class="break"></div>
+
+                <div class="addInfo">
+                    <div class="data">
+                        <div class="tag">ElementName </div>
+                        <input id="ElementName" type="text" name="elementname" />
+                        <div class="tag">ElementValue </div>
+                        <input id="ElementValue" type="text" name="elementvalue" />
+                        <div class="AddElementButton">Add</div>
+                    </div>
+
+                    <img src="~/Images/TriCLogo.png" alt="Tri-C Logo" />
+
+                </div>
+
             </div>
+        
         </div>
 
-        <div class="account"></div>
-
-    <footer>Cuyahoga Community College <br /> 700 Carnegie Avenue, Cleveland, Ohio 44115</footer>
+        <footer>Cuyahoga Community College <br /> 700 Carnegie Avenue, Cleveland, Ohio 44115</footer>
 
     </div>
 

@@ -152,6 +152,7 @@
   <ItemGroup>
     <Folder Include="Accounts\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
