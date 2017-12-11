@@ -72,7 +72,7 @@
     margin: 20px;
     display: inline-block;
     position: relative;
-    bottom: 60px;
+    bottom: 80px;
     font-size: 13px;
 }
 
@@ -80,6 +80,12 @@
 {
     width: 250px;
     display: inline-block;
+}
+
+.index .container .login .data .error
+{
+    color: red;
+    font-weight: bold;
 }
 
 .index .container .login .data .mobileHeader
@@ -201,6 +207,12 @@
     width: 80px;
 }
 
+.index .container .accountInfo .addInfo .data .error 
+{
+    color: red;
+    font-weight: bold;
+}
+
 .index .container .accountInfo .addInfo .data .AddElementButton 
 {
     display: block;
@@ -288,6 +300,11 @@
         margin-left: 20px;
     }
 
+    .index .container .login .data .error 
+    {
+        margin-left: 20px;
+    }
+
     .index .container .login .data .mobileHeader 
     {
         display: block;
@@ -355,6 +372,11 @@
         display: block;
         width: 80px;
         margin: 5px;
+        margin-left: 40px;
+    }
+
+    .index .container .accountInfo .addInfo .data .error 
+    {
         margin-left: 40px;
     }
 

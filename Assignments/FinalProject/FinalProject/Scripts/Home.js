@@ -9,11 +9,11 @@ Home.LoginButtonClick = function () {
                 var info = JSON.parse(result);
                 if (info.Username == "Invalid")
                 {
-                    alert("Username Invalid");
+                    $("#UsernameError").html("Username Invalid");
                 }
                 else if (info.Password == "Wrong")
                 {
-                    alert("Wrong Password");
+                    $("#PasswordError").html("Wrong Password");
                 }
                 else
                 { 
@@ -32,8 +32,6 @@ Home.LoginButtonClick = function () {
                     });
             }
         });
-
-    
 }
 
 Home.CreateAccountButtonClick = function () {
@@ -43,11 +41,32 @@ Home.CreateAccountButtonClick = function () {
             data: { Username: $("#NewUsername").val(), Password: $("#NewPassword").val(), EmailAdd: $("#NewEmailAdd").val(), EmailCon: $("#NewEmailCon").val() },
             success: function (result) {
                 var info = JSON.parse(result);
-                if (info.Message == "Error") {
-                    alert(info.Message);
+                if (info.Username == "Invalid")
+                {
+                    $("#NewUsernameError").html("Username Invalid; Minimun 6 Characters");
                 }
-                
-                else {
+                else if (info.Username == "Exists")
+                {
+                    $("#NewUsernameError").html("Username Already Exists");
+                }
+                else if (info.Password == "Invalid")
+                {
+                    $("#NewPasswordError").html("Password Invalid; Minimum 6 Characters");
+                }
+                else if (info.EmailAdd == "Invalid")
+                {
+                    $("#NewEmailAddError").html("Email Must Contain @ Symbol");
+                }
+                else if (info.EmailCon == "Invalid")
+                {
+                    $("#NewEmailConError").html("Confirm Email");
+                }
+                else if (info.EmailCon == "Mismatch")
+                {
+                    $("#NewEmailConError").html("Emails Must Match");
+                }
+                else
+                {
                     $(".login").animate({ left: "-100%" });
                     $(".accountInfo").animate({ left: "8px" });
                 }
@@ -63,8 +82,6 @@ Home.CreateAccountButtonClick = function () {
                     });
             }
         });
-
-    
 }
 
 Home.AddElementButtonClick = function () {
@@ -73,22 +90,27 @@ Home.AddElementButtonClick = function () {
             url: "Home/AddOrUpdateElement",
             data: { Username: $("#LoginUsername").val() || $("#NewUsername").val(), ElementName: $("#ElementName").val(), ElementValue: $("#ElementValue").val() },
             success: function (result) {
-                alert(result);
-
-
-                $.ajax
-                    ({
-                        url: "Home/GetAccountInformation",
-                        data: { Username: $("#LoginUsername").val() || $("#NewUsername").val() },
-                        success: function (result) {
-                            $(".displayInfo").html(result)
+                var info = JSON.parse(result);
+                if (info.Error == "Cannot Change Username") {
+                    $("#ElementNameError").html(info.Error);
+                }
+                else if (info.Error == "Cannot Have Spaces In Element Name") {
+                    $("#ElementNameError").html(info.Error);
+                }
+                else
+                { 
+                    $.ajax
+                        ({
+                            url: "Home/GetAccountInformation",
+                            data: { Username: $("#LoginUsername").val() || $("#NewUsername").val() },
+                            success: function (result) {
+                                $(".displayInfo").html(result)
                         }
-                    });
+                        });
+                }   
             }
 
         });
-
-    
 }
 
 $(document).ready(function () {

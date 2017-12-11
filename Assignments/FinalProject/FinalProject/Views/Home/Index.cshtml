@@ -31,9 +31,11 @@
                 <div class="data">
                     <div class="mobileHeader">Log In</div>
                     <div class="tag">Username </div>
-                    <input id="LoginUsername"type="text" name="username" />
+                    <input id="LoginUsername" type="text" name="username" />
+                    <div id="UsernameError" class="error"></div>
                     <div class="tag">Password </div>
-                    <input id="LoginPassword"type="password" name="password" />
+                    <input id="LoginPassword" type="password" name="password" />
+                    <div id="PasswordError" class="error"></div>
                     <div class="LoginButton">Log In</div>
                 </div>
 
@@ -47,12 +49,16 @@
                     <div class="mobileHeader">Create Account</div>
                     <div class="tag">Username </div>
                     <input id="NewUsername" type="text" name="username" value=""/>
+                    <div id="NewUsernameError" class="error"></div>
                     <div class="tag">Password </div>
                     <input id="NewPassword" type="password" name="password" value=""/>
+                    <div id="NewPasswordError" class="error"></div>
                     <div class="tag">Email </div>
                     <input id="NewEmailAdd" type="text" name="email" value=""/>
+                    <div id="NewEmailAddError" class="error"></div>
                     <div class="tag">Repeat E-mail Address </div>
                     <input id="NewEmailCon" type="text" name="email repeat" value=""/>
+                    <div id="NewEmailConError" class="error"></div>
                     <div class="CreateAccountButton">Create Account</div>
                 </div>
 
@@ -70,6 +76,7 @@
                     <div class="data">
                         <div class="tag">ElementName </div>
                         <input id="ElementName" type="text" name="elementname" />
+                        <div id="ElementNameError" class="error"></div>
                         <div class="tag">ElementValue </div>
                         <input id="ElementValue" type="text" name="elementvalue" />
                         <div class="AddElementButton">Add</div>
