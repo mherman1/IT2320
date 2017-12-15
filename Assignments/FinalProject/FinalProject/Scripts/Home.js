@@ -104,8 +104,9 @@ Home.AddElementButtonClick = function () {
                             url: "Home/GetAccountInformation",
                             data: { Username: $("#LoginUsername").val() || $("#NewUsername").val() },
                             success: function (result) {
-                                $(".displayInfo").html(result)
-                        }
+                                var info = JSON.parse(result);
+                                $(".displayInfo").html(info.Payload);
+                            }   
                         });
                 }   
             }
